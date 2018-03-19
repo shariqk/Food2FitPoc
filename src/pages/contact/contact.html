@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Near me
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div ion-item-group *ngFor="let p of results.places">
+      <ion-item-divider color="light">{{p.name}}</ion-item-divider>
+
+      <div ion-item *ngFor="let f of p.items">
+        <p>{{f.name}}
+          <br>
+          c: {{ f.calories }}, f: {{ f.fat }}, s: {{ f.sodium }}, ch: {{ f.cholestrol }}
+      </p>
+    </div>
+  </div>
+
+</ion-content>

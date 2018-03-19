@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+  <ion-content>
+
+    <ion-list>
+      <ion-list-header>
+        Allergies
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Eggs</ion-label>
+        <ion-toggle checked="{{ profile.allergies.eggs }}"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Wheat</ion-label>
+        <ion-toggle checked="{{ profile.allergies.wheat }}"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Milk</ion-label>
+        <ion-toggle checked="{{ profile.allergies.milk }}"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fish</ion-label>
+        <ion-toggle checked="{{ profile.allergies.fish }}"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Shell Fish</ion-label>
+        <ion-toggle checked="{{ profile.allergies.shellfish }}"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Peanuts</ion-label>
+        <ion-toggle checked="{{ profile.allergies.peanuts }}"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Tree nuts</ion-label>
+        <ion-toggle checked="{{ profile.allergies.treenuts }}"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Wheat</ion-label>
+        <ion-toggle checked="{{ profile.allergies.wheat }}"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Soybeans</ion-label>
+        <ion-toggle checked="{{ profile.allergies.soybeans }}"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Gluten</ion-label>
+        <ion-toggle checked="{{ profile.allergies.gluten }}"></ion-toggle>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button block (click)="saveProfile()">Save Profile</button>
+
+  </ion-content>
